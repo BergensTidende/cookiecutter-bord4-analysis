@@ -60,7 +60,7 @@ pip install cookiecutter
 To create a new analysis using the cookiecutter template, run the following command
 
 ```bash
-cookiecutter github.yadi.uady
+cookiecutter https://github.com/BergensTidende/cookiecutter-bord4-analysis
 ```
 
 #### Note about exporting to pdf
@@ -88,7 +88,7 @@ Some functionality requries you to set a few enviroment varibales. Theese can ei
 
 * DATAWRAPPER_API_TOKEN
 
-#### Schibsted MM-API
+#### API keys for insertion of Multimedia Content
 
 * MM_API_BASE_URL
 * MM_API_BASE_URL
@@ -115,18 +115,19 @@ To use templates you need to have a Personal Access Token to Github
 ├── README.md
 ├── data
 │   ├── processed
-│   ├── public
 │   ├── source
 │   └── untracked
-├── docs
+├── report
 │   ├── css
 │   ├── figures
 │   └── notes
+├── output
 ├── eda
 ├── etl
 ├── publish
 ├── scratch
 └── src
+    └── utils
 ```
 
 - `README.md`
@@ -167,6 +168,8 @@ To use templates you need to have a Personal Access Token to Github
   - This is where all the content for the final artilce is created. Figures, numbers and json-files. 
   - This folder is symlinked in the docs folder for easy reference to notebooks and files you wish to include in reports.
   - Notebooks in this folder can ingest data from either `data/source` (if that data comes from the source in a workable format) or `data/processed` (if the data required some prep).
+- `output`
+  - Public-facing data files go here - data files which are 'live'.
 - `scratch`
   - Directory to stash away things that are not needed in the project, but that you want to keep for future reference
   - This directory is not git tracked.
@@ -180,8 +183,6 @@ To use templates you need to have a Personal Access Token to Github
     - better log functions
   - `src/scripts`
     - for scripts used by the make file
-  - `src/utils`
-    - much needed utils functions. Like code for uploading to S3.
 
 ## Usage
 
