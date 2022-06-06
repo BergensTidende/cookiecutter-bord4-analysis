@@ -1,0 +1,22 @@
+site_name: Bord4 data-analyse
+site_url: https://github.schibsted.io/bergens-tidende-bord4/test-cookie/
+repo_url: https://github.schibsted.io/bergens-tidende-bord4/test-cookie/
+site_description: Analyse
+docs_dir: report
+site_dir: retport_site
+nav:
+  home: index.md
+  Research: eda/Research.ipynb
+  Article: publish/Article.ipynb
+theme:
+  name: material
+  palette:
+    scheme: slate
+extra_css:
+  - css/extra.css
+plugins:
+  - mknotebooks:
+      exporter_kwargs:
+        exclude_input: true
+  - print-site:
+      print_page_title: 'Rapport'

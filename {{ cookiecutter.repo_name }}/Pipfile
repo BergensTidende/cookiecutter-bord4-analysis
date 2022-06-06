@@ -1,0 +1,27 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+black = "==19.10b0"
+boto3 = "*"
+geopandas = "*"
+jupyterlab = "*"
+matplotlib = "*"
+mkdocs = "*"
+mkdocs-material = "*"
+mkdocs-material-extensions = "*"
+mknotebooks = "*"
+mkdocs-print-site-plugin = "*"
+pandas = "*"
+plotly = "*"
+pyjstat = "*"
+python-dotenv = "*"
+questionary = "*"
+requests = "*"
+
+[requires]
+python_version = "3.8"

@@ -1,0 +1,15 @@
+{
+    "author_name": "Your Name",
+    "project_name": "project_name",
+    "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "project_short_description": "Short project description",
+    "source": "What is your data source",
+    "include_examples": "n",
+    "_copy_without_render": [
+        "etl",
+        "eda",
+        "publish",
+        "docs/eda",
+        "docs/publish"
+    ]
+}
