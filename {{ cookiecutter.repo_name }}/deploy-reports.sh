@@ -1,6 +1,6 @@
 #!/bin/sh
 PROJECTNAME=${PWD##*/}
-ANALSYSDIR=/usr/share/nginx/html/analyse/
+ANALSYSDIR="${ANALSYSDIR:-/usr/share/nginx/html/analyse/}"
 WEBADRESSE=$ANALYSE_URL
 CONNECTION=$ANALYSE_CONNECTION
 DESTDIR="$ANALSYSDIR$PROJECTNAME"
