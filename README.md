@@ -63,23 +63,6 @@ To create a new analysis using the cookiecutter template, run the following comm
 cookiecutter https://github.com/BergensTidende/cookiecutter-bord4-analysis
 ```
 
-#### Note about exporting to pdf
-Exporting to pdf uses weaseyprint, wich in turn uses [different libraries on windows and mac](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#macos).
-
-##### MacOS
-
-First install 
-
-If you want to export to pdf and you're not using homebrews python. You have to add a few symlinks.
-
-```bash
-sudo ln -s /opt/homebrew/opt/glib/lib/libgobject-2.0.0.dylib /usr/local/lib/gobject-2.0
-sudo ln -s /opt/homebrew/opt/pango/lib/libpango-1.0.dylib /usr/local/lib/pango-1.0
-sudo ln -s /opt/homebrew/opt/harfbuzz/lib/libharfbuzz.dylib /usr/local/lib/harfbuzz
-sudo ln -s /opt/homebrew/opt/fontconfig/lib/libfontconfig.1.dylib /usr/local/lib/fontconfig-1
-sudo ln -s /opt/homebrew/opt/pango/lib/libpangoft2-1.0.dylib /usr/local/lib/pangoft2-1.0
-```
-
 ### Env variables
 -----------
 Some functionality requries you to set a few enviroment varibales. Theese can either be set in a .env file on root in the project. Or in your .zshenv-file (or equal for the bash you're using). You'll find theese values in 1pass
@@ -100,12 +83,14 @@ Some functionality requries you to set a few enviroment varibales. Theese can ei
 
 #### Deploy analysis somewhere
 
-* $ANALYSE_CONNECTION
-* $ANALYSE_URL
+* ANALYSE_CONNECTION
+* ANALYSE_URL
 
 ### Templates
 ------------
-To use templates you need to have a Personal Access Token to Github
+[There are a collection of templates that can be used](https://github.com/BergensTidende/bord4-analysis-templates/)
+
+To use a template in your project run the command `make template` and follow the instructions on the screen.
 
 ### The resulting directory structure
 ------------
@@ -173,7 +158,7 @@ To use templates you need to have a Personal Access Token to Github
 - `scratch`
   - Directory to stash away things that are not needed in the project, but that you want to keep for future reference
   - This directory is not git tracked.
-- `src``
+- `src`
   - Python files used as utils that can be imported from notebooks and script.
   - `src/dataframe`
     - util functions for working with dataframes
@@ -184,7 +169,37 @@ To use templates you need to have a Personal Access Token to Github
   - `src/scripts`
     - for scripts used by the make file
 
-## Usage
+## Make commands
+
+### Run jupyter lab
+```bash
+make lab
+```
+
+### Create TOC for the mkdocs folder.
+```bash
+make toc
+```
+
+### Use mkdocs to build the content from the `report` folder to `report_build`.
+```bash
+make build
+```
+
+### Serve the content from `report_build`
+```bash
+make serve
+```
+
+### Run build and then serve the content from `report_build`
+```bash
+make site
+```
+
+### Use one of our many fancy templates!
+```bash
+make template
+``` 
 
 ## Contributing
 
