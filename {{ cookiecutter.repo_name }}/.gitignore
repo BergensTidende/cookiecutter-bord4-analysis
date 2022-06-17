@@ -3,13 +3,12 @@
 
 .ipynb_checkpoints/
 
-scratch/
-!scratch/.gitkeep
-
-data/untracked
-!data/untracked/.gitkeep
-
+scratch/*
+data/untracked/*
 report_build/
+
+# gitkeep files
+!.gitkeep
 
 # Distribution / packaging
 .Python
