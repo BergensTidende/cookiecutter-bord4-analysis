@@ -7,4 +7,4 @@ DESTDIR="$ANALSYSDIR$PROJECTNAME"
 
 echo "Kopierer filer til server"
 ssh $CONNECTION "mkdir -p $DESTDIR"
-scp -r ./site/* $CONNECTION:$DESTDIR
+scp -r ./report_build/* $CONNECTION:$DESTDIR

@@ -9,7 +9,7 @@ scratch/
 data/untracked
 !data/untracked/.gitkeep
 
-site/
+report_build/
 
 # Distribution / packaging
 .Python

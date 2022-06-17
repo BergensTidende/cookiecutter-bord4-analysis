@@ -28,7 +28,7 @@ build:
 ## build the contents of docs and test that it works before deploying
 site:
 	make build
-	cd retport_build; \
+	cd report_build; \
   	python -m SimpleHTTPServer 1234
 	
 ## deploy the built docs to server

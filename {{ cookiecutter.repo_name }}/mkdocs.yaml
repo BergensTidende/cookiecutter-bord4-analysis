@@ -3,7 +3,7 @@ site_url: https://github.schibsted.io/bergens-tidende-bord4/test-cookie/
 repo_url: https://github.schibsted.io/bergens-tidende-bord4/test-cookie/
 site_description: Analyse
 docs_dir: report
-site_dir: retport_site
+site_dir: report_build
 nav:
   home: index.md
   Research: eda/Research.ipynb
