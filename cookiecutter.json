@@ -1,7 +1,7 @@
 {
     "author_name": "Your Name",
     "project_name": "project_name",
-    "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
     "project_short_description": "Short project description",
     "source": "What is your data source",
     "include_examples": "n",
