@@ -8,6 +8,9 @@ pipenv install
 # download the script files from the template repo
 pipenv run python src/scripts/download_scripts.py
 
+# create .env file
+mv env .env
+
 {% if cookiecutter.include_examples == 'n' %}
 
 rm etl/*.ipynb
@@ -16,6 +19,3 @@ rm eda/*.ipynb
 rm publish/*.ipynb
 
 {% endif %}
-#git init
-#git add .
-#git commit -m "Initial commit"
