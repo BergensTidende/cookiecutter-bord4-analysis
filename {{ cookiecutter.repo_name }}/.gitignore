@@ -1,5 +1,9 @@
 .env
 .DS_Store
+.vscode/*
+
+# Local History for Visual Studio Code
+.history/
 
 .ipynb_checkpoints/
 
