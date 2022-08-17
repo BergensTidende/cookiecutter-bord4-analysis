@@ -1,6 +1,10 @@
 """
   The api for NVDB is not available as a package at the monent. 
+<<<<<<< HEAD
   This function downloads the api and puts it in the src/nvdbapiv3 folder.
+=======
+  This function downloads the api and puts it in the src/nvdb folder.
+>>>>>>> f9057852fac99743f1a3ee600d2af89c12a6d080
 
   The api is available at: https://github.com/LtGlahn/nvdbapi-V3/tree/master/nvdbapiv3
 """
@@ -9,7 +13,6 @@ import requests
 import os
 import sys
 import logging
-
 
 _log_fmt = '%(asctime)s - %(module)s - %(levelname)s - %(message)s'
 logging.basicConfig(level=os.environ.get('LOGLEVEL', 'INFO'), format=_log_fmt)
