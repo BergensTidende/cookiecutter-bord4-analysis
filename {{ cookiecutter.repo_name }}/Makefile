@@ -1,4 +1,4 @@
-.PHONY: lab docs build site deploy toc template
+.PHONY: lab docs build site deploy toc template nvdb
 
 #################################################################################
 # GLOBALS                                                                       #
@@ -42,6 +42,10 @@ toc:
 ## Use a template from bord4-templates
 template:
 	pipenv run python src/scripts/download_templates.py
+
+## Download the nvdb api code
+nvdb:
+	pipenv run python src/scripts/download_nvdb.py	
 
 
 #################################################################################
