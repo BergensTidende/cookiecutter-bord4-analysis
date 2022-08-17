@@ -1,6 +1,6 @@
 """
   The api for NVDB is not available as a package at the monent. 
-  This function downloads the api and puts it in the src/nvdb folder.
+  This function downloads the api and puts it in the src/nvdbapiv3 folder.
 
   The api is available at: https://github.com/LtGlahn/nvdbapi-V3/tree/master/nvdbapiv3
 """
@@ -10,6 +10,7 @@ import os
 import sys
 import logging
 
+
 _log_fmt = '%(asctime)s - %(module)s - %(levelname)s - %(message)s'
 logging.basicConfig(level=os.environ.get('LOGLEVEL', 'INFO'), format=_log_fmt)
 _MODULE = sys.modules[__name__]
@@ -17,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 def main():
   PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
-  NVDB_DIRECTORY = os.path.join(PROJECT_DIRECTORY, "src", "nvdb")
+  NVDB_DIRECTORY = os.path.join(PROJECT_DIRECTORY, "src", "nvdbapiv3")
   
   NVDB_URL = "https://raw.githubusercontent.com/LtGlahn/nvdbapi-V3/master/nvdbapiv3/"
   
@@ -41,10 +42,21 @@ def main():
       new_file_path = os.path.join(NVDB_DIRECTORY, file)
     
       r = requests.get(f"{NVDB_URL}{file}", allow_redirects=True)
-      open(new_file_path, 'wb').write(r.content)
+      content = r.text
+      
+      if file == "nvdbapiv3.py":
+        logger.info("Fixing the import in the nvdbapiv3.py file")
+        search_text = "from . import apiforbindelse"
+        replace_text = "import apiforbindelse"
+        content = content.replace(search_text, replace_text)
+      
+      open(new_file_path, 'wb').write(content.encode())
+      
       logger.info("Downloaded the file: {}".format(file))
     
-    logger.info("The NVDB api has been downloaded and are available in the src/nvdb folder")
+    logger.info("The NVDB api has been downloaded and are available in the src/nvdbapiv3 folder")
+    logger.info("Remember to create a nvdbapi-clientinfo.json file in the src/nvdbapiv3 folder and it with X-Client and X-Kontaktperson")
+    
   else:
     logger.info("The NVDB folder already exists. Delete it and run the script again to download the api")
       
