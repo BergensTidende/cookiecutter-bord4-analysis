@@ -1,10 +1,6 @@
 """
   The api for NVDB is not available as a package at the monent. 
-<<<<<<< HEAD
   This function downloads the api and puts it in the src/nvdbapiv3 folder.
-=======
-  This function downloads the api and puts it in the src/nvdb folder.
->>>>>>> f9057852fac99743f1a3ee600d2af89c12a6d080
 
   The api is available at: https://github.com/LtGlahn/nvdbapi-V3/tree/master/nvdbapiv3
 """
@@ -13,6 +9,8 @@ import requests
 import os
 import sys
 import logging
+import json
+
 
 _log_fmt = '%(asctime)s - %(module)s - %(levelname)s - %(message)s'
 logging.basicConfig(level=os.environ.get('LOGLEVEL', 'INFO'), format=_log_fmt)
@@ -58,7 +56,12 @@ def main():
       logger.info("Downloaded the file: {}".format(file))
     
     logger.info("The NVDB api has been downloaded and are available in the src/nvdbapiv3 folder")
-    logger.info("Remember to create a nvdbapi-clientinfo.json file in the src/nvdbapiv3 folder and it with X-Client and X-Kontaktperson")
+    
+    new_file_path = os.path.join(NVDB_DIRECTORY, "nvdbapi-clientinfo.json")
+    with open(new_file_path, "w") as f:
+      contact_data = {"X-Client": "", "X-Kontaktperson": ""}
+      json.dump(contact_data, f, indent=2)
+      logger.info("The nvdbapi-clientinfo.json has been created in the src/nvdbapiv3 folder. Open it and fill out X-Client and X-Kontaktperson")
     
   else:
     logger.info("The NVDB folder already exists. Delete it and run the script again to download the api")
