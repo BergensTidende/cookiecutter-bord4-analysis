@@ -1,4 +1,4 @@
-.PHONY: lab docs build site deploy toc template nvdb
+.PHONY: lab docs build site deploy toc template new nvdb eda etl publish extra
 
 #################################################################################
 # GLOBALS                                                                       #
@@ -42,6 +42,27 @@ toc:
 ## Use a template from bord4-templates
 template:
 	pipenv run python src/scripts/download_templates.py
+
+## Download scripts from the extra folder from the template repo
+extra:
+	pipenv run python src/scripts/download_extra.py
+
+## Create new file in etl from generic-header
+etl:
+	@read -p "Enter file name for the new template:" filename; \
+	curl -o etl/$$filename.ipynb;  https://raw.githubusercontent.com/BergensTidende/bord4-analysis-templates/master/templates/generic-header.ipynb \
+	echo "Created etl/$$filename.ipynb"
+
+## Create new file in eda from generic-header
+eda:
+	@read -p "Enter file name for the new template:" filename; \
+	curl -o eda/$$filename.ipynb;  https://raw.githubusercontent.com/BergensTidende/bord4-analysis-templates/master/templates/generic-header.ipynb \
+	echo "Created eda/$$filename.ipynb"
+
+publish:
+	@read -p "Enter file name for the new template:" filename; \
+	curl -o publish/$$filename.ipynb;  https://raw.githubusercontent.com/BergensTidende/bord4-analysis-templates/master/templates/generic-header.ipynb \
+	echo "Created pubish/$$filename.ipynb"
 
 ## Download the nvdb api code
 nvdb:
