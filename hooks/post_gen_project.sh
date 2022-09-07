@@ -7,6 +7,7 @@ pipenv install
 
 # download the script files from the template repo
 pipenv run python src/scripts/download_scripts.py
+pipenv jupyter nbextension enable --py widgetsnbextension
 
 # create .env file
 mv env .env
