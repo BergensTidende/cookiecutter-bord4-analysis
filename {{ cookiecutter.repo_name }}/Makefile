@@ -49,19 +49,19 @@ extra:
 
 ## Create new file in etl from generic-header
 etl:
-	@read -p "What's the name of the file?" filename; \
-	curl -o etl/$$filename.ipynb;  https://raw.githubusercontent.com/BergensTidende/bord4-analysis-templates/master/templates/generic-header.ipynb \
+	@read -p "What's the name of the file?:" filename; \
+	curl https://raw.githubusercontent.com/BergensTidende/bord4-analysis-templates/master/templates/generic-header.ipynb -o etl/$$filename.ipynb; \
 	echo "Created etl/$$filename.ipynb"
 
 ## Create new file in eda from generic-header
 eda:
-	@read -p "What's the name of the file?" filename; \
-	curl -o eda/$$filename.ipynb;  https://raw.githubusercontent.com/BergensTidende/bord4-analysis-templates/master/templates/generic-header.ipynb \
+	@read -p "What's the name of the file?:" filename; \
+	curl https://raw.githubusercontent.com/BergensTidende/bord4-analysis-templates/master/templates/generic-header.ipynb -o eda/$$filename.ipynb; \
 	echo "Created eda/$$filename.ipynb"
 
 publish:
-	@read -p "What's the name of the file?" filename; \
-	curl -o publish/$$filename.ipynb;  https://raw.githubusercontent.com/BergensTidende/bord4-analysis-templates/master/templates/generic-header.ipynb \
+	@read -p "What's the name of the file?:" filename; \
+	curl https://raw.githubusercontent.com/BergensTidende/bord4-analysis-templates/master/templates/generic-header.ipynb -o publish/$$filename.ipynb; \
 	echo "Created pubish/$$filename.ipynb"
 
 ## Download the nvdb api code
