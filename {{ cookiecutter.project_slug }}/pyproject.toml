@@ -1,0 +1,104 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_slug }}"
+version = "0.1.0"
+description = "{{ cookiecutter.project_short_description }}"
+authors = ["{{ cookiecutter.author_name }}"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+ipywidgets = "^8.0.4"
+jupyterlab = "^3.5.2"
+matplotlib = "^3.6.2"
+pakkenellik = "^0.1.2"
+pandas = "^1.5.2"
+python = "^3.10.0"
+python-dotenv = "^0.21.0"
+questionary = "^1.10.0"
+requests = "^2.28.1"
+
+[tool.poetry.group.ssb]
+optional = true
+
+[tool.poetry.group.ssb.dependencies]
+pyjstat = "^2.3.0"
+
+[tool.poetry.group.nvdb]
+optional = true
+
+[tool.poetry.group.nvdb.dependencies]
+nvdbapi-v3 = "^1.0.0"
+geopandas = "^0.12.2"
+folium = "^0.14.0"
+mapclassify = "^2.4.3"
+
+[tool.poetry.group.gis]
+optional = true
+
+[tool.poetry.group.gis.dependencies]
+owslib = "^0.27.2"
+fiona = "^1.8.22"
+geopandas = "^0.12.2"
+folium = "^0.14.0"
+mapclassify = "^2.4.3"
+
+[tool.poetry.group.screenscraping]
+optional = true
+
+[tool.poetry.group.screenscraping.dependencies]
+beautifulsoup4 = "^4.11.1"
+cchardet = "^2.1.7"
+lxml = "^4.9.2"
+selenium = "^4.7.2"
+
+[tool.poetry.group.lint]
+optional = true
+
+[tool.poetry.group.lint.dependencies]
+black = {extras = ["jupyter"], version = "^22.12.0"}
+isort = "^5.11.4"
+flake8 = "^6.0.0"
+mypy = "^0.991"
+types-requests = "^2.28.11.7"
+types-pyyaml = "^6.0.12.2"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.4.2"
+mkdocs-material = "^8.5.11"
+mkdocs-material-extensions = "^1.1.1"
+mknotebooks = "^0.7.1"
+mkdocs-print-site-plugin = {version="^2.3.4", python=">=3.6"}
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+# 3rd party import
+ignore_missing_imports = true
+# dynamic typing
+disallow_any_unimported = true
+disallow_any_expr = false
+disallow_any_decorated = false
+disallow_any_explicit = true
+disallow_any_generics = false
+disallow_subclassing_any = true
+# platform
+python_version = "3.10"
+# untyped
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_decorators = true
+# None and Optional
+no_implicit_optional = true
+# Warnings
+warn_return_any = false
+warn_unreachable = true
+# Misc
+pretty = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

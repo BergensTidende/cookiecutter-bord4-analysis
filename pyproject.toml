@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "cookiecutter-bord4-analysis"
+version = "0.4.0"
+description = "Cookiecutter project for data analysis"
+authors = ["Lasse Lambrechts <lasse.lambrechts@bt.no>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.lint.dependencies]
+black = {extras = ["jupyter"], version = "^22.12.0"}
+isort = "^5.11.4"
+flake8 = "^6.0.0"
+mypy = "^0.991"
+types-requests = "^2.28.11.7"
+types-pyyaml = "^6.0.12.2"
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+# 3rd party import
+ignore_missing_imports = true
+# dynamic typing
+disallow_any_unimported = true
+disallow_any_expr = false
+disallow_any_decorated = false
+disallow_any_explicit = true
+disallow_any_generics = false
+disallow_subclassing_any = true
+# platform
+python_version = "3.10"
+# untyped
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_decorators = true
+# None and Optional
+no_implicit_optional = true
+# Warnings
+warn_return_any = false
+warn_unreachable = true
+# Misc
+pretty = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

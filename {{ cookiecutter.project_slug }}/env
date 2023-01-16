@@ -1,3 +1,4 @@
+# DO NOT ADD THIS FILE TO VERSION CONTROL!
 # Environment variables go here, can be read by `python-dotenv` package:
 #
 #   `src/script.py`
@@ -12,5 +13,8 @@
 #    integrations_enabled = os.getenv("INTEGRATIONS_ENABLED", None)
 #   ----------------------------------------------------------------
 #
-# DO NOT ADD THIS FILE TO VERSION CONTROL!
+
+# Set pythonpath to a relative path. In this case it sets where .env # file is present as the root path
+PYTHONPATH=.
+
 INTEGRATIONS_ENABLED=False

@@ -40,12 +40,13 @@ Heavily inspired by the following projects:
 * [Cookiecutter Data Science](http://drivendata.github.io/cookiecutter-data-science/)
 * [Zego's fork of the above cookiecutter](https://github.com/zegocover/cookiecutter-zego-data-science)
 * [EasyData](https://github.com/hackalog/easydata)
+* [The Python Graph Gallery](https://www.python-graph-gallery.com)
 
 
 ### Requirements
 -----------
  - pyenv - manage python versions
- - pipenv - manage python dependencies
+ - poetry - manage python dependencies
  - [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0
 
 To install on mac you can use homebrew:
@@ -53,7 +54,7 @@ To install on mac you can use homebrew:
 ``` bash
 brew upgrade
 brew install pyenv
-brew install pipenv
+brew install poetry
 pip install cookiecutter
 ```
 
@@ -80,6 +81,10 @@ Some functionality requries you to set a few enviroment varibales. Theese can ei
 
 * S3_BUCKET_INTERNAL_NOTEBOOK_DATA
 * S3_BUCKET_PUBLIC
+
+### Google sheets
+
+* GOOGLE_APPLICATION_CREDENTIALS_PATH
 
 #### Deploy analysis somewhere
 
@@ -112,7 +117,7 @@ To use a template in your project run the command `make template` and follow the
 ├── publish
 ├── scratch
 └── src
-    └── utils
+    └── scripts
 ```
 
 - `README.md`
@@ -160,14 +165,8 @@ To use a template in your project run the command `make template` and follow the
   - This directory is not git tracked.
 - `src`
   - Python files used as utils that can be imported from notebooks and script.
-  - `src/dataframe`
-    - util functions for working with dataframes
-  - `src/integration`
-    - helper functions when working with Schibsted MM API
-  - `src/log`
-    - better log functions
   - `src/scripts`
-    - for scripts used by the make file
+    - for scripts used by the make file and for downloading templates.
 
 ## Make commands
 
