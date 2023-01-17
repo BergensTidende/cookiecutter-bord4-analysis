@@ -314,18 +314,6 @@ files = [
 jinja2 = "*"
 
 [[package]]
-name = "bump2version"
-version = "1.0.1"
-description = "Version-bump your software with a single command!"
-category = "main"
-optional = false
-python-versions = ">=3.5"
-files = [
-    {file = "bump2version-1.0.1-py2.py3-none-any.whl", hash = "sha256:37f927ea17cde7ae2d7baf832f8e80ce3777624554a653006c9144f8017fe410"},
-    {file = "bump2version-1.0.1.tar.gz", hash = "sha256:762cb2bfad61f4ec8e2bdf452c7c267416f8c70dd9ecb1653fd0bbb01fa936e6"},
-]
-
-[[package]]
 name = "cachetools"
 version = "5.2.1"
 description = "Extensible memoizing collections and decorators"
@@ -1146,14 +1134,14 @@ files = [
 
 [[package]]
 name = "ipykernel"
-version = "6.20.1"
+version = "6.20.2"
 description = "IPython Kernel for Jupyter"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "ipykernel-6.20.1-py3-none-any.whl", hash = "sha256:a314e6782a4f9e277783382976b3a93608a3787cd70a235b558b47f875134be1"},
-    {file = "ipykernel-6.20.1.tar.gz", hash = "sha256:f6016ecbf581d0ea6e29ba16cee6cc1a9bbde3835900c46c6571a791692f4139"},
+    {file = "ipykernel-6.20.2-py3-none-any.whl", hash = "sha256:5d0675d5f48bf6a95fd517d7b70bcb3b2c5631b2069949b5c2d6e1d7477fb5a0"},
+    {file = "ipykernel-6.20.2.tar.gz", hash = "sha256:1893c5b847033cd7a58f6843b04a9349ffb1031bc6588401cadc9adb58da428e"},
 ]
 
 [package.dependencies]
@@ -1568,14 +1556,14 @@ files = [
 
 [[package]]
 name = "jupyterlab-server"
-version = "2.18.0"
+version = "2.19.0"
 description = "A set of server components for JupyterLab and JupyterLab like applications."
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "jupyterlab_server-2.18.0-py3-none-any.whl", hash = "sha256:2ce377afe6c5f762e933de1d942cad1ec07a1fbace4b586cd7a905fd57892695"},
-    {file = "jupyterlab_server-2.18.0.tar.gz", hash = "sha256:7830f085debc9417a72ebf482dc5cb477d6bf76884826c73182fa457c7829df4"},
+    {file = "jupyterlab_server-2.19.0-py3-none-any.whl", hash = "sha256:51f6922e34f9f3db875051f4f7b57539a04ddd030f42d9ce6062dedf67bf7f2f"},
+    {file = "jupyterlab_server-2.19.0.tar.gz", hash = "sha256:9aec21a2183bbedd9f91a86628355449575f1862d88b28ad5f905019d31e6c21"},
 ]
 
 [package.dependencies]
@@ -2214,14 +2202,14 @@ test = ["ipykernel", "ipython", "ipywidgets", "nbconvert (>=7.0.0)", "pytest (>=
 
 [[package]]
 name = "nbconvert"
-version = "7.2.7"
+version = "7.2.8"
 description = "Converting Jupyter Notebooks"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "nbconvert-7.2.7-py3-none-any.whl", hash = "sha256:e057f1f87a6ac50629b724d9a46b40e2ba394d6f20ee7f33f4acef1928a15af3"},
-    {file = "nbconvert-7.2.7.tar.gz", hash = "sha256:8b727b0503bf4e0ff3907c8bea030d3fc4015fbee8669ac6ac2a5a6668b49d5e"},
+    {file = "nbconvert-7.2.8-py3-none-any.whl", hash = "sha256:ac57f2812175441a883f50c8ff113133ca65fe7ae5a9f1e3da3bfd1a70dce2ee"},
+    {file = "nbconvert-7.2.8.tar.gz", hash = "sha256:ccedacde57a972836bfb46466485be29ed1364ed7c2f379f62bad47d340ece99"},
 ]
 
 [package.dependencies]
@@ -2243,7 +2231,7 @@ traitlets = ">=5.0"
 
 [package.extras]
 all = ["nbconvert[docs,qtpdf,serve,test,webpdf]"]
-docs = ["ipykernel", "ipython", "myst-parser", "nbsphinx (>=0.2.12)", "pydata-sphinx-theme", "sphinx (==5.0.2)"]
+docs = ["ipykernel", "ipython", "myst-parser", "nbsphinx (>=0.2.12)", "pydata-sphinx-theme", "sphinx (==5.0.2)", "sphinxcontrib-spelling"]
 qtpdf = ["nbconvert[qtpng]"]
 qtpng = ["pyqtwebengine (>=5.15)"]
 serve = ["tornado (>=6.1)"]
@@ -2475,21 +2463,19 @@ files = [
 
 [[package]]
 name = "pakkenellik"
-version = "0.1.5"
+version = "0.1.8"
 description = "Swiss army knife for Bord4's data anlysis"
 category = "main"
 optional = false
 python-versions = ">=3.10,<4.0"
 files = [
-    {file = "pakkenellik-0.1.5-py3-none-any.whl", hash = "sha256:6c80387ab4474d1db7d77ab33f8b43f41b9600dc7c26f403041ffc2038fc6b72"},
-    {file = "pakkenellik-0.1.5.tar.gz", hash = "sha256:438f48f9c9070201f6294bb475bd15d4408f6446177949f70943026a157d23dd"},
+    {file = "pakkenellik-0.1.8-py3-none-any.whl", hash = "sha256:c7df62210564a6750252e5e20907200cfd167335650903af9e3479e0b13e4ef9"},
+    {file = "pakkenellik-0.1.8.tar.gz", hash = "sha256:eb36b8e523a8cfafc50f8280b33f80f901180c8e15ae9d14259adc48cac8cde6"},
 ]
 
 [package.dependencies]
 boto3 = ">=1.26.39,<2.0.0"
-bump2version = ">=1.0.1,<2.0.0"
 geopandas = ">=0.12.2,<0.13.0"
-gspread = ">=5.7.2,<6.0.0"
 gspread-dataframe = ">=3.3.0,<4.0.0"
 gspread-formatting = ">=1.1.2,<2.0.0"
 pandas = ">=1.5.2,<2.0.0"
@@ -2497,6 +2483,11 @@ plotly = ">=5.11.0,<6.0.0"
 pyjstat = ">=2.3.0,<3.0.0"
 python-dotenv = ">=0.21.0,<0.22.0"
 requests = ">=2.28.1,<3.0.0"
+
+[package.extras]
+gspread = ["gspread (>=5.7.2,<6.0.0)"]
+gspread-dataframe = ["gspread (>=5.7.2,<6.0.0)"]
+gspread-formatting = ["gspread (>=5.7.2,<6.0.0)"]
 
 [[package]]
 name = "pandas"
