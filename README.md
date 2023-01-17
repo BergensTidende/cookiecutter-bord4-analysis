@@ -47,7 +47,7 @@ Heavily inspired by the following projects:
 -----------
  - pyenv - manage python versions
  - poetry - manage python dependencies
- - [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0
+ - [Cookieninja Python package](https://github.com/cookieninja-generator/cookieninja)
 
 To install on mac you can use homebrew:
 
@@ -55,13 +55,13 @@ To install on mac you can use homebrew:
 brew upgrade
 brew install pyenv
 brew install poetry
-pip install cookiecutter
+pip install cookieninja
 ```
 
 To create a new analysis using the cookiecutter template, run the following command
 
 ```bash
-cookiecutter https://github.com/BergensTidende/cookiecutter-bord4-analysis
+cookieninja https://github.com/BergensTidende/cookiecutter-bord4-analysis
 ```
 
 ### Env variables

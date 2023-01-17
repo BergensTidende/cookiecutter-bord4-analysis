@@ -53,3 +53,8 @@ lint-mypy-report: ## run mypy & create report
 	@mypy --config-file pyproject.toml . --html-report ./mypy_html
 
 lint: lint-black lint-isort lint-flake8 lint-mypy ## run all linters
+
+##@ Configuration
+.PHONY: cookiecutterrc
+cookiecutterrc: ## create .cookiecutterrc
+	@echo 'default_context:\n  full_name: ""\n  email: ""\n' > ~/.cookiecutterrc

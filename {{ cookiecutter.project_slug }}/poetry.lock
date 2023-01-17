@@ -259,46 +259,6 @@ css = ["tinycss2 (>=1.1.0,<1.2)"]
 dev = ["Sphinx (==4.3.2)", "black (==22.3.0)", "build (==0.8.0)", "flake8 (==4.0.1)", "hashin (==0.17.0)", "mypy (==0.961)", "pip-tools (==6.6.2)", "pytest (==7.1.2)", "tox (==3.25.0)", "twine (==4.0.1)", "wheel (==0.37.1)"]
 
 [[package]]
-name = "boto3"
-version = "1.26.50"
-description = "The AWS SDK for Python"
-category = "main"
-optional = false
-python-versions = ">= 3.7"
-files = [
-    {file = "boto3-1.26.50-py3-none-any.whl", hash = "sha256:9c434bcd02c527485c89d6efbd38b7c205e06ab06abe80e5dbf9a8be836c77c2"},
-    {file = "boto3-1.26.50.tar.gz", hash = "sha256:3737d8a506f50065bb2366a6b8e7545d88034f4771527790a125e0abd307d8e8"},
-]
-
-[package.dependencies]
-botocore = ">=1.29.50,<1.30.0"
-jmespath = ">=0.7.1,<2.0.0"
-s3transfer = ">=0.6.0,<0.7.0"
-
-[package.extras]
-crt = ["botocore[crt] (>=1.21.0,<2.0a0)"]
-
-[[package]]
-name = "botocore"
-version = "1.29.50"
-description = "Low-level, data-driven core of boto 3."
-category = "main"
-optional = false
-python-versions = ">= 3.7"
-files = [
-    {file = "botocore-1.29.50-py3-none-any.whl", hash = "sha256:0e9ab19787ad7a079c00d3e40b16bc66423e54bc0e8a203b70b543bd8854d5ad"},
-    {file = "botocore-1.29.50.tar.gz", hash = "sha256:5cc68b78a48217550c18b4639420b7c3b48ed9e09e749343143acbfa423ceec5"},
-]
-
-[package.dependencies]
-jmespath = ">=0.7.1,<2.0.0"
-python-dateutil = ">=2.1,<3.0.0"
-urllib3 = ">=1.25.4,<1.27"
-
-[package.extras]
-crt = ["awscrt (==0.15.3)"]
-
-[[package]]
 name = "branca"
 version = "0.6.0"
 description = "Generate complex HTML+JS pages with Python"
@@ -312,18 +272,6 @@ files = [
 
 [package.dependencies]
 jinja2 = "*"
-
-[[package]]
-name = "cachetools"
-version = "5.2.1"
-description = "Extensible memoizing collections and decorators"
-category = "main"
-optional = false
-python-versions = "~=3.7"
-files = [
-    {file = "cachetools-5.2.1-py3-none-any.whl", hash = "sha256:8462eebf3a6c15d25430a8c27c56ac61340b2ecf60c9ce57afc2b97e450e47da"},
-    {file = "cachetools-5.2.1.tar.gz", hash = "sha256:5991bc0e08a1319bb618d3195ca5b6bc76646a49c21d55962977197b301cc1fe"},
-]
 
 [[package]]
 name = "cchardet"
@@ -555,7 +503,7 @@ files = [
 name = "click"
 version = "8.1.3"
 description = "Composable command line interface toolkit"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -570,7 +518,7 @@ colorama = {version = "*", markers = "platform_system == \"Windows\""}
 name = "click-plugins"
 version = "1.1.1"
 description = "An extension module for click to enable registering CLI commands via setuptools entry-points."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 files = [
@@ -588,7 +536,7 @@ dev = ["coveralls", "pytest (>=3.6)", "pytest-cov", "wheel"]
 name = "cligj"
 version = "0.7.2"
 description = "Click params for commmand line interfaces to GeoJSON"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, <4"
 files = [
@@ -832,7 +780,7 @@ devel = ["colorama", "json-spec", "jsonschema", "pylint", "pytest", "pytest-benc
 name = "fiona"
 version = "1.8.22"
 description = "Fiona reads and writes spatial data files"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 files = [
@@ -953,7 +901,7 @@ files = [
 name = "geopandas"
 version = "0.12.2"
 description = "Geographic pandas extensions"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.8"
 files = [
@@ -1015,98 +963,6 @@ files = [
 
 [package.dependencies]
 gitdb = ">=4.0.1,<5"
-
-[[package]]
-name = "google-auth"
-version = "2.16.0"
-description = "Google Authentication Library"
-category = "main"
-optional = false
-python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*"
-files = [
-    {file = "google-auth-2.16.0.tar.gz", hash = "sha256:ed7057a101af1146f0554a769930ac9de506aeca4fd5af6543ebe791851a9fbd"},
-    {file = "google_auth-2.16.0-py2.py3-none-any.whl", hash = "sha256:5045648c821fb72384cdc0e82cc326df195f113a33049d9b62b74589243d2acc"},
-]
-
-[package.dependencies]
-cachetools = ">=2.0.0,<6.0"
-pyasn1-modules = ">=0.2.1"
-rsa = {version = ">=3.1.4,<5", markers = "python_version >= \"3.6\""}
-six = ">=1.9.0"
-
-[package.extras]
-aiohttp = ["aiohttp (>=3.6.2,<4.0.0dev)", "requests (>=2.20.0,<3.0.0dev)"]
-enterprise-cert = ["cryptography (==36.0.2)", "pyopenssl (==22.0.0)"]
-pyopenssl = ["cryptography (>=38.0.3)", "pyopenssl (>=20.0.0)"]
-reauth = ["pyu2f (>=0.1.5)"]
-requests = ["requests (>=2.20.0,<3.0.0dev)"]
-
-[[package]]
-name = "google-auth-oauthlib"
-version = "0.8.0"
-description = "Google Authentication Library"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-files = [
-    {file = "google-auth-oauthlib-0.8.0.tar.gz", hash = "sha256:81056a310fb1c4a3e5a7e1a443e1eb96593c6bbc55b26c0261e4d3295d3e6593"},
-    {file = "google_auth_oauthlib-0.8.0-py2.py3-none-any.whl", hash = "sha256:40cc612a13c3336d5433e94e2adb42a0c88f6feb6c55769e44500fc70043a576"},
-]
-
-[package.dependencies]
-google-auth = ">=2.15.0"
-requests-oauthlib = ">=0.7.0"
-
-[package.extras]
-tool = ["click (>=6.0.0)"]
-
-[[package]]
-name = "gspread"
-version = "5.7.2"
-description = "Google Spreadsheets Python API"
-category = "main"
-optional = false
-python-versions = ">=3.6, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-files = [
-    {file = "gspread-5.7.2-py3-none-any.whl", hash = "sha256:dbeedd08c6a7f7b0bfc1a54e17c29205362250c77bf98e11125c5d99fd7f4ba7"},
-    {file = "gspread-5.7.2.tar.gz", hash = "sha256:ce76f9c16b88ccb792350142224a59afa8e69f7463f3d3417148cbe892efc7cb"},
-]
-
-[package.dependencies]
-google-auth = ">=1.12.0"
-google-auth-oauthlib = ">=0.4.1"
-
-[[package]]
-name = "gspread-dataframe"
-version = "3.3.0"
-description = "Read/write gspread worksheets using pandas DataFrames"
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "gspread-dataframe-3.3.0.tar.gz", hash = "sha256:8c15f3af8e3b9801f33dd544aa06fe35f0b069414f78791231b44c8da469e708"},
-    {file = "gspread_dataframe-3.3.0-py2.py3-none-any.whl", hash = "sha256:6fdbe3586db1c12820e85b867d2241b34e6c5afff47450bd4b1e92134ce0dbe8"},
-]
-
-[package.dependencies]
-gspread = ">=3.0.0"
-pandas = ">=0.24.0"
-six = ">=1.12.0"
-
-[[package]]
-name = "gspread-formatting"
-version = "1.1.2"
-description = "Complete Google Sheets formatting support for gspread worksheets"
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "gspread-formatting-1.1.2.tar.gz", hash = "sha256:4d954d8c283880c4189f5684652b114c3889ffa4b442f339b80e2371782cb4c0"},
-    {file = "gspread_formatting-1.1.2-py2.py3-none-any.whl", hash = "sha256:e5d14477f18ec2f08db0a00d22470d1c621d53b0633412c4873d86712c9a7bca"},
-]
-
-[package.dependencies]
-gspread = ">=3.0.0"
 
 [[package]]
 name = "h11"
@@ -1308,18 +1164,6 @@ MarkupSafe = ">=2.0"
 
 [package.extras]
 i18n = ["Babel (>=2.7)"]
-
-[[package]]
-name = "jmespath"
-version = "1.0.1"
-description = "JSON Matching Expressions"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "jmespath-1.0.1-py3-none-any.whl", hash = "sha256:02e2e4cc71b5bcab88332eebf907519190dd9e6e82107fa7f83b1003a6252980"},
-    {file = "jmespath-1.0.1.tar.gz", hash = "sha256:90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"},
-]
 
 [[package]]
 name = "joblib"
@@ -2063,7 +1907,7 @@ nbconvert = ">=6.0.0"
 name = "munch"
 version = "2.5.0"
 description = "A dot-accessible dictionary (a la JavaScript objects)"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 files = [
@@ -2400,23 +2244,6 @@ requests = ">=2.28,<3.0"
 urllib3 = ">=1.26.4,<2.0.0"
 
 [[package]]
-name = "oauthlib"
-version = "3.2.2"
-description = "A generic, spec-compliant, thorough implementation of the OAuth request-signing logic"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-files = [
-    {file = "oauthlib-3.2.2-py3-none-any.whl", hash = "sha256:8139f29aac13e25d502680e9e19963e83f16838d48a0d71c287fe40e7067fbca"},
-    {file = "oauthlib-3.2.2.tar.gz", hash = "sha256:9859c40929662bec5d64f34d01c99e093149682a3f38915dc0655d5a633dd918"},
-]
-
-[package.extras]
-rsa = ["cryptography (>=3.0.0)"]
-signals = ["blinker (>=1.4.0)"]
-signedtoken = ["cryptography (>=3.0.0)", "pyjwt (>=2.0.0,<3)"]
-
-[[package]]
 name = "outcome"
 version = "1.2.0"
 description = "Capture the outcome of Python function calls."
@@ -2463,31 +2290,28 @@ files = [
 
 [[package]]
 name = "pakkenellik"
-version = "0.1.8"
+version = "0.1.9"
 description = "Swiss army knife for Bord4's data anlysis"
 category = "main"
 optional = false
 python-versions = ">=3.10,<4.0"
 files = [
-    {file = "pakkenellik-0.1.8-py3-none-any.whl", hash = "sha256:c7df62210564a6750252e5e20907200cfd167335650903af9e3479e0b13e4ef9"},
-    {file = "pakkenellik-0.1.8.tar.gz", hash = "sha256:eb36b8e523a8cfafc50f8280b33f80f901180c8e15ae9d14259adc48cac8cde6"},
+    {file = "pakkenellik-0.1.9-py3-none-any.whl", hash = "sha256:84ccfddeece38251a62164b6bff4d26c10f5589570d842a81589a7950fbe9efa"},
+    {file = "pakkenellik-0.1.9.tar.gz", hash = "sha256:5cfb1e8d74c5de2e5814d005408b5ef29bd11d14d3b131aaa1639c36771cd2ed"},
 ]
 
 [package.dependencies]
-boto3 = ">=1.26.39,<2.0.0"
-geopandas = ">=0.12.2,<0.13.0"
-gspread-dataframe = ">=3.3.0,<4.0.0"
-gspread-formatting = ">=1.1.2,<2.0.0"
 pandas = ">=1.5.2,<2.0.0"
 plotly = ">=5.11.0,<6.0.0"
-pyjstat = ">=2.3.0,<3.0.0"
 python-dotenv = ">=0.21.0,<0.22.0"
 requests = ">=2.28.1,<3.0.0"
 
 [package.extras]
-gspread = ["gspread (>=5.7.2,<6.0.0)"]
-gspread-dataframe = ["gspread (>=5.7.2,<6.0.0)"]
-gspread-formatting = ["gspread (>=5.7.2,<6.0.0)"]
+gis = ["geopandas (>=0.12.2,<0.13.0)"]
+gspead = ["gspread (>=5.7.2,<6.0.0)", "gspread-dataframe (>=3.3.0,<4.0.0)", "gspread-formatting (>=1.1.2,<2.0.0)"]
+nvdb = ["geopandas (>=0.12.2,<0.13.0)"]
+s3 = ["boto3 (>=1.26.39,<2.0.0)"]
+ssb = ["pyjstat (>=2.3.0,<3.0.0)"]
 
 [[package]]
 name = "pandas"
@@ -2797,33 +2621,6 @@ files = [
 tests = ["pytest"]
 
 [[package]]
-name = "pyasn1"
-version = "0.4.8"
-description = "ASN.1 types and codecs"
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "pyasn1-0.4.8-py2.py3-none-any.whl", hash = "sha256:39c7e2ec30515947ff4e87fb6f456dfc6e84857d34be479c9d4a4ba4bf46aa5d"},
-    {file = "pyasn1-0.4.8.tar.gz", hash = "sha256:aef77c9fb94a3ac588e87841208bdec464471d9871bd5050a287cc9a475cd0ba"},
-]
-
-[[package]]
-name = "pyasn1-modules"
-version = "0.2.8"
-description = "A collection of ASN.1-based protocols modules."
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "pyasn1-modules-0.2.8.tar.gz", hash = "sha256:905f84c712230b2c592c19470d3ca8d552de726050d1d1716282a1f6146be65e"},
-    {file = "pyasn1_modules-0.2.8-py2.py3-none-any.whl", hash = "sha256:a50b808ffeb97cb3601dd25981f6b016cbb3d31fbf57a8b8a87428e6158d0c74"},
-]
-
-[package.dependencies]
-pyasn1 = ">=0.4.6,<0.5.0"
-
-[[package]]
 name = "pycodestyle"
 version = "2.10.0"
 description = "Python style guide checker"
@@ -2878,7 +2675,7 @@ plugins = ["importlib-metadata"]
 name = "pyjstat"
 version = "2.3.0"
 description = "Library to handle JSON-stat data in python using pandas DataFrames."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 files = [
@@ -2923,7 +2720,7 @@ diagrams = ["jinja2", "railroad-diagrams"]
 name = "pyproj"
 version = "3.4.1"
 description = "Python interface to PROJ (cartographic projections and coordinate transformations library)"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.8"
 files = [
@@ -3307,25 +3104,6 @@ socks = ["PySocks (>=1.5.6,!=1.5.7)"]
 use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 
 [[package]]
-name = "requests-oauthlib"
-version = "1.3.1"
-description = "OAuthlib authentication support for Requests."
-category = "main"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-files = [
-    {file = "requests-oauthlib-1.3.1.tar.gz", hash = "sha256:75beac4a47881eeb94d5ea5d6ad31ef88856affe2332b9aafb52c6452ccf0d7a"},
-    {file = "requests_oauthlib-1.3.1-py2.py3-none-any.whl", hash = "sha256:2577c501a2fb8d05a304c09d090d6e47c306fef15809d102b327cf8364bddab5"},
-]
-
-[package.dependencies]
-oauthlib = ">=3.0.0"
-requests = ">=2.0.0"
-
-[package.extras]
-rsa = ["oauthlib[signedtoken] (>=3.0.0)"]
-
-[[package]]
 name = "rfc3339-validator"
 version = "0.1.4"
 description = "A pure python RFC3339 validator"
@@ -3351,39 +3129,6 @@ files = [
     {file = "rfc3986_validator-0.1.1-py2.py3-none-any.whl", hash = "sha256:2f235c432ef459970b4306369336b9d5dbdda31b510ca1e327636e01f528bfa9"},
     {file = "rfc3986_validator-0.1.1.tar.gz", hash = "sha256:3d44bde7921b3b9ec3ae4e3adca370438eccebc676456449b145d533b240d055"},
 ]
-
-[[package]]
-name = "rsa"
-version = "4.9"
-description = "Pure-Python RSA implementation"
-category = "main"
-optional = false
-python-versions = ">=3.6,<4"
-files = [
-    {file = "rsa-4.9-py3-none-any.whl", hash = "sha256:90260d9058e514786967344d0ef75fa8727eed8a7d2e43ce9f4bcf1b536174f7"},
-    {file = "rsa-4.9.tar.gz", hash = "sha256:e38464a49c6c85d7f1351b0126661487a7e0a14a50f1675ec50eb34d4f20ef21"},
-]
-
-[package.dependencies]
-pyasn1 = ">=0.1.3"
-
-[[package]]
-name = "s3transfer"
-version = "0.6.0"
-description = "An Amazon S3 Transfer Manager"
-category = "main"
-optional = false
-python-versions = ">= 3.7"
-files = [
-    {file = "s3transfer-0.6.0-py3-none-any.whl", hash = "sha256:06176b74f3a15f61f1b4f25a1fc29a4429040b7647133a463da8fa5bd28d5ecd"},
-    {file = "s3transfer-0.6.0.tar.gz", hash = "sha256:2ed07d3866f523cc561bf4a00fc5535827981b117dd7876f036b0c1aca42c947"},
-]
-
-[package.dependencies]
-botocore = ">=1.12.36,<2.0a.0"
-
-[package.extras]
-crt = ["botocore[crt] (>=1.20.29,<2.0a.0)"]
 
 [[package]]
 name = "scikit-learn"
@@ -3506,7 +3251,7 @@ win32 = ["pywin32"]
 name = "setuptools"
 version = "66.0.0"
 description = "Easily download, build, install, upgrade, and uninstall Python packages"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -3523,7 +3268,7 @@ testing-integration = ["build[virtualenv]", "filelock (>=3.4.0)", "jaraco.envs (
 name = "shapely"
 version = "2.0.0"
 description = "Manipulation and analysis of geometric objects"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
