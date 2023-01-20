@@ -28,9 +28,7 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-
 Data journalism analysis projects tend to become a bit messy. To make it easier for your future self and your colleagues to make sense of your work, we propose both a reasonable structure that's also flexible. With code for sharing your analysis while you work on it and for publishing. Nothing in this template is carved in stone, both critisism and PR's are welcome. 
-
 
 ### Inspiration
 -----------

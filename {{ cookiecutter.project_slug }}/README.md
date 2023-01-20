@@ -2,9 +2,9 @@
 
 {{ cookiecutter.project_short_description }}
 
-*Created by {{ cookiecutter.author_name }}*
+*Created by {{ cookiecutter.full_name }}*
 
-*Reporter: {{ cookiecutter.author_name }}*
+*Reporter: {{ cookiecutter.full_name }}*
 
 ## Project goal
 
