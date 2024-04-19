@@ -31,3 +31,11 @@
 ## Data notes
 
 *TK: Add important caveats, limitations, and source contact info here.*
+
+If you can't find the correct enviroment directory in Visual Code, go to the project directory and type
+
+```
+poetry env info --path | pbcopy
+```
+
+This will copy the enviroment path to the clipboard. Paste the value in VSCode when you mush choose enviroment and you're ready to go. 
